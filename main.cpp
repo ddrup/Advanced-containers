@@ -34,6 +34,7 @@ void test_stack_allocator() {
 
     for (int i = 0; i < 10000; ++i) {
         v.push_back(i);
+        // std::cout << i << std::endl;
     }
 }
 
@@ -41,7 +42,7 @@ void test_std_allocator() {
     LOG_DURATION("std::allocator test");
     std::vector<int> v;
 
-    for (int i = 0; i < 10000; ++i) {
+    for (int i = 0; i < 50000; ++i) {
         v.push_back(i);
     }
 }

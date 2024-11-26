@@ -58,7 +58,8 @@ public:
         throw std::bad_alloc();
     }
 
-    storage_->reserve(static_cast<char*>(aligned_ptr) - storage_->get_buf() + n * sizeof(T));
+    storage_->reserve(n);
+
     return static_cast<T*>(aligned_ptr);
   }
 
